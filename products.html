@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CosmicLens Product | Education Operations Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="CosmicLens Logo" class="logo-img" />
+      CosmicLens
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Product Section -->
+  <section class="product-hero">
+    <div class="container">
+      <h1>Education Operations Platform</h1>
+      <p>A modular platform for managing lessons, tracking student progress, automating scheduling, and simplifying admin tasks. Ideal for driving schools, tutoring programs, and educational teams.</p>
+    </div>
+  </section>
+  
+  <div class="product-page-content">
+    <div class="product-module">
+        <h1>Education Operations Platform</h1>
+        <p>Built to streamline scheduling, communication, and tracking for educational businesses—like driving schools, tutoring centers, and private lessons.</p>
+        <ul>
+        <li>Real-time calendar and scheduling</li>
+        <li>Secure login with role-based permissions</li>
+        <li>Student progress tracking dashboard</li>
+        <li>Automated instructor-student matching</li>
+        <li>Admin tools for payments, reporting, and logs</li>
+        </ul>
+        <p class="price-tag">$19.99/month</p>
+        <a href="#" class="demo-button" onclick="handleDemoClick(event)">View Demo</a>
+    </div>
+</div>
+  
+
+  <footer class="footer">
+    <p>© 2025 CosmicLens · Built by Jawad Azeem</p>
+  </footer>
+</body>
+</html>
+
+<script>
+    // Fade/slide in on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const content = document.querySelector('.product-page-content');
+      setTimeout(() => {
+        content.classList.add('visible');
+      }, 100); // small delay to trigger transition
+    });
+  
+    // Demo button alert
+    function handleDemoClick(event) {
+      event.preventDefault();
+      alert("Demo is currently unavailable.");
+    }
+  </script>
+  
