@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | CosmicLens</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="contact-body">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="CosmicLens Logo" class="logo-img" />
+      CosmicLens
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Heading -->
+  <section class="contact-hero">
+    <h1>Contact CosmicLens</h1>
+    <p>Tell me what you're working on and let’s make it happen.</p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form-section">
+    <form class="contact-form" action="https://formspree.io/f/mgvkrdrb" method="POST">
+      <input type="text" name="name" placeholder="Full Name*" required />
+      <input type="email" name="email" placeholder="Email*" required />
+      <input type="tel" name="phone" placeholder="Phone Number*" required />
+      <select name="service" required>
+        <option value="" disabled selected>Interested in*</option>
+        <option value="Web App">Custom Web App</option>
+        <option value="Automation">Workflow Automation</option>
+        <option value="Dashboard">Analytics Dashboard</option>
+        <option value="Other">Other</option>
+      </select>
+      <textarea name="message" placeholder="Tell me more..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 CosmicLens · Built by Jawad Azeem</p>
+  </footer>
+
+</body>
+</html>
