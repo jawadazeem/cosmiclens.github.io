@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CosmicLens Product | Education Operations Platform</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>CosmicLens Core | Smart Scheduling for Educators</title>
+  <link rel="stylesheet" href="products.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">
       <img src="logo.png" alt="CosmicLens Logo" class="logo-img" />
@@ -21,45 +22,105 @@
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
   </nav>
-
-  <!-- Product Section -->
-  <section class="product-hero">
-    <div class="container">
-      <h1>Products</h1>
-    </div>
-  </section>
-  
-  <div class="product-page-content">
-    <div class="product-module">
+<body>
+  <div class="page-wrapper fade-in">
+      <!-- HERO -->
+      <section class="hero-section full-screen">
         <h1>CosmicLens Core</h1>
-        <p>A modular education operations platform designed to streamline scheduling, communication, lesson management, and student progress tracking—perfect for driving schools, tutoring centers, and other educational programs. It simplifies administrative tasks while giving educational teams the tools they need to stay organized and focused on teaching.</p>
-        <ul>
-        <li>Real-time calendar and scheduling</li>
-        <li>Secure login with role-based permissions</li>
-        <li>Student progress tracking dashboard</li>
-        <li>Automated instructor-student matching</li>
-        <li>Admin tools for payments, reporting, and logs</li>
-        </ul>
-        <p class="price-tag">FREE</p>
-        <a href="https://steer-safe-dashboard.firebaseapp.com/" class="demo-button" target="_blank" rel="noopener noreferrer">Try Now</a>
-    </div>
-</div>
-  
+        <p>Where smart scheduling meets modern education. Save time, simplify admin, and elevate your entire operation.</p>
+        <div class="hero-buttons">
+          <a href="https://steer-safe-dashboard.firebaseapp.com/" class="btn-blue">Try for Free</a>
+          <a href="#features" class="btn-outline">See Features</a>
+        </div>
+      </section>
 
-  <footer class="footer">
-    <p>© 2025 CosmicLens · Built by Jawad Azeem</p>
-  </footer>
+      <!-- FEATURES -->
+      <section class="features-showcase" id="features">
+        <h2>What You'll Love</h2>
+        <div class="feature-grid">
+          <div class="feature-box">
+            <h3>Smart Scheduling</h3>
+            <p>Match instructors and students, sync calendars, and reschedule with a click.</p>
+          </div>
+          <div class="feature-box">
+            <h3>Progress Dashboards</h3>
+            <p>Visual insights for student learning and instructor performance.</p>
+          </div>
+          <div class="feature-box">
+            <h3>Role-Based Access</h3>
+            <p>Control who sees what. Clean and secure permission levels.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq-container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">What is CosmicLens Core?</div>
+          <div class="faq-answer">
+            CosmicLens Core is an all-in-one education operations platform that helps teams manage scheduling, communication, instructor-student assignments, and performance tracking in one central dashboard.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How does it help my organization?</div>
+          <div class="faq-answer">
+            It reduces the time spent on admin tasks like manual scheduling and communication by automating instructor assignments, student tracking, and lesson management — so you can focus more on teaching and less on logistics.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do I need technical skills to use it?</div>
+          <div class="faq-answer">
+            Not at all. CosmicLens Core is built to be intuitive. If you know how to manage a calendar or send an email, you’ll feel right at home. No technical setup or configuration required.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I use it for multiple programs or locations?</div>
+          <div class="faq-answer">
+            Yes. You can manage multiple programs, departments, or even physical locations under a single account with permission-based access for each team.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is my data secure?</div>
+          <div class="faq-answer">
+            Absolutely. All data is encrypted in transit and at rest. Only users with specific permissions can access sensitive information, and regular backups ensure nothing is ever lost.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is there a free trial?</div>
+          <div class="faq-answer">
+            Yes. You can start using CosmicLens Core for free with access to all core features. No credit card needed — just sign up and explore.
+          </div>
+        </div>
+      </section>
+
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>© 2025 CosmicLens · Built with vision by Jawad Azeem</p>
+      </footer>
+
+      <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+          q.addEventListener('click', () => {
+            q.parentElement.classList.toggle('active');
+          });
+        });
+      </script>
+    </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const wrapper = document.querySelector('.fade-in');
+      wrapper.classList.add('visible');
+    });
+  </script>
+
 </body>
 </html>
-
-<script>
-    // Fade/slide in on load
-    document.addEventListener('DOMContentLoaded', () => {
-      const content = document.querySelector('.product-page-content');
-      setTimeout(() => {
-        content.classList.add('visible');
-      }, 100); // small delay to trigger transition
-    });
-  
-  </script>
-  

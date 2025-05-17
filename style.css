@@ -7,7 +7,6 @@ body {
 
 
 
-
 /* Base Reset */
 * {
   margin: 0;
@@ -43,7 +42,7 @@ body {
 }
 
 .logo-img {
-  width: 35px;
+  width: 50px;
   margin-right: 10px;
 }
 
@@ -165,11 +164,9 @@ h2 {
 
 /* CTA */
 .cta-section {
-  background: linear-gradient(to right, #3e006c, #001e3c);
-  padding: 100px 20px;
-  text-align: center;
-  color: white;
+  background: linear-gradient(to right, #0a1e3a, #163e65);
 }
+
 
 .cta-box {
   position: relative;
@@ -686,3 +683,142 @@ h2 {
   background: linear-gradient(to right, #003c65, #0f274d);
   transform: translateY(-2px);
 }
+
+
+/* Services Section */
+.services-section {
+  background-color: #050f1b;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+.services-intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #c9d1d9;
+}
+
+
+.service-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service-box h3 {
+  color: #66d9ef;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.service-box p {
+  color: #d4d7dd;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Section Divider */
+.section-divider {
+  margin: 60px auto 40px;
+  border: 0;
+  height: 1px;
+  width: 80%;
+  background-color: #1c2a38;
+}
+
+/* Tools Section */
+.tools-used {
+  margin-top: 40px;
+}
+
+.tools-used h3 {
+  font-size: 1.4rem;
+  color: #58c0f6;
+  margin-bottom: 20px;
+}
+
+.tool-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tool-icons img {
+  height: 48px;
+  width: 48px;
+  filter: brightness(0.95);
+  transition: transform 0.3s ease;
+}
+
+.tool-icons img:hover {
+  transform: scale(1.1);
+}
+
+.services-zigzag {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 900px;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.service-card {
+  position: relative;
+  padding: 40px;
+  background: linear-gradient(to right, #0a1a2c, #081421);
+  border-radius: 20px;
+  border: 1px solid #1a2b3d;
+  width: 85%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.02);
+}
+
+.service-card.left {
+  align-self: flex-start;
+}
+
+.service-card.right {
+  align-self: flex-end;
+}
+
+.service-content h3 {
+  font-size: 1.4rem;
+  color: #5fd4f4;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  color: #d6dbe1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Optional: Faint background circle behind cards */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+
+
+
+
