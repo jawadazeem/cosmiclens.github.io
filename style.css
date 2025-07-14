@@ -584,35 +584,6 @@ h2 {
   opacity: 1;
 }
 
-.tools-used {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.tools-used h3 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: #66d9ff;
-}
-
-.tool-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.tool-icons img {
-  height: 50px;
-  transition: transform 0.2s ease;
-  opacity: 0.85;
-}
-
-.tool-icons img:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
 /* Split Layout for About Section */
 .split-layout .split {
   display: flex;
