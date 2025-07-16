@@ -65,7 +65,7 @@ body {
 
 /* HERO SECTION */
 .hero-section {
-  background: linear-gradient(to right, #030f22, #000);
+  background: none;
   color: white;
   text-align: center;
   padding: 150px 20px 100px;
@@ -112,6 +112,7 @@ body {
   background: #0077b6;
 }
 
+
 .scroll-indicator {
   margin-top: 50px;
   font-size: 2rem;
@@ -130,6 +131,20 @@ body {
     transform: translateY(-5px);
   }
 }
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+
 
 /* SECTIONS */
 section {
@@ -157,15 +172,20 @@ h2 {
 
 /* SERVICES */
 .services-section {
-  background-color: #000d1a;
-  color: #ccddee;
-  transition: all 0.5s ease;
+  background: linear-gradient(-45deg, #001527, #002B49, #00375B, #001527);
+  background-size: 500% 500%;
+  animation: backgroundMotion 20s ease infinite;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
 }
+
 
 /* CTA */
 .cta-section {
-  background: linear-gradient(to right, #0a1e3a, #163e65);
+  background-color: #000812;
 }
+
 
 
 .cta-box {
@@ -324,13 +344,13 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(-45deg, #001527, #002B49, #00375B, #001527);
-  background-size: 500% 500%;
-  animation: backgroundMotion 20s ease infinite;
+  position: relative;
+  overflow: hidden;
   text-align: center;
   flex-direction: column;
   color: white;
 }
+
 
 @keyframes backgroundMotion {
   0% {
@@ -343,6 +363,17 @@ h2 {
     background-position: 0% 50%;
   }
 }
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 
 .product-module {
   background: rgba(255, 255, 255, 0.05);
@@ -409,6 +440,8 @@ h2 {
 }
 
 .module-box {
+  position: relative; 
+  overflow: visible;
   background: linear-gradient(145deg, #001e3c, #002b55);
   padding: 1.5rem;
   border-radius: 1rem;
@@ -417,6 +450,34 @@ h2 {
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.box-number {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.module-box {
+  position: relative;
+  background: linear-gradient(145deg, #001e3c, #002b55);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 220px;
+  text-align: left;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.module-box h3, .module-box p {
+  position: relative;
+  z-index: 1;
+}
+
 
 .module-box:hover {
   transform: translateY(-6px);
@@ -636,7 +697,9 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   justify-content: center;
+  overflow: visible; 
 }
+
 
 
 .hero-learn-button {
@@ -741,16 +804,55 @@ h2 {
   position: relative;
 }
 
+
+
 .service-card {
   position: relative;
   padding: 40px;
-  background: linear-gradient(to right, #0a1a2c, #081421);
   border-radius: 20px;
   border: 1px solid #1a2b3d;
   width: 85%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
+
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* black tint for readability */
+  z-index: 0;
+  border-radius: 20px;
+}
+
+
+.service-content {
+  position: relative;
+  z-index: 1;
+}
+
+.service-content h3 {
+  font-size: 1.4rem;
+  color: #5fd4f4;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  color: #d6dbe1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.service-card:hover {
+  transform: scale(1.02);
+}
+
 
 .service-card:hover {
   transform: scale(1.02);
@@ -776,20 +878,20 @@ h2 {
   line-height: 1.6;
 }
 
-/* Optional: Faint background circle behind cards */
+/*Faint background circle behind cards */
 .service-card::before {
   content: "";
   position: absolute;
-  top: -20px;
-  left: -40px;
-  width: 140%;
-  height: 140%;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
-  border-radius: 50%;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* default black tint */
   z-index: 0;
+  border-radius: 20px;
+  transition: background 0.3s ease;
 }
 
-
+.service-card:hover::before {
+  background: rgba(0, 0, 0, 0.7); /* darker tint on hover */
+}
 
 
 
